@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.initial {
+  position: initial;
+}
+.sticky {
+  position: sticky;
+}
+.active {
+  @apply bg-yellow-50 text-yellow-500;
+}
+.active > svg {
+  @apply text-yellow-500;
+}
+.head {
+  @apply text-4xl uppercase font-semibold mx-6 my-3;
+}
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    @apply bg-slate-200;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-slate-50;
+    border-radius: 100vh;
+    border: 3px solid #f6f7ed;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-yellow-50;
+  }
+}
+/* Animations */
+.spinner-6 {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  border: 4px solid #0000;
+  border-radius: 50%;
+  border-color: #ccc #0000;
+  animation: s6 1s infinite linear;
+}
+.spinner-6.mini {
+  width: 2rem;
+}
+.spinner-6.xs {
+  width: 0.5rem;
+}
+.spinner-6::before,
+.spinner-6::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 2px;
+  border: inherit;
+  border-radius: 50%;
+}
+.spinner-6::before {
+  border-color: #b6b617 #0000;
+  animation: inherit;
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+}
+.spinner-6::after {
+  margin: 8px;
+}
+
+@keyframes s6 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+/* body {
+  background: #000;
+} */
