@@ -27,7 +27,7 @@ function MiniHeader({
                 return (
                   <Button
                     className={`${
-                      isActive ? "border-b-2 border-b-yellow-500" : ""
+                      isActive ? "border-b-2 border-b-green-500" : ""
                     } capitalize`}
                     key={el}
                     handler={() => navigate(`${el}`)}
@@ -44,7 +44,7 @@ function MiniHeader({
               return (
                 <Button
                   className={`${el?.class} text-lg ${
-                    isActive ? "border-b-2 border-b-yellow-500" : ""
+                    isActive ? "border-b-2 border-b-green-500" : ""
                   }  flex items-center gap-2`}
                   key={el.title}
                   handler={() => navigate(`${el.title}`)}

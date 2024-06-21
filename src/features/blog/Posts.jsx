@@ -18,7 +18,7 @@ function Posts({ post }) {
   } = post;
   return (
     <div className="py-3 space-y-2">
-      <div>
+      <div className="hidden">
         {author && (
           <div className="flex flex-col">
             <div className="flex">
@@ -35,21 +35,6 @@ function Posts({ post }) {
         )}
       </div>
       <div className={`grid  justify-between gap-4`}>
-        <div className={`h-72  flex gap-2`}>
-          <img
-            // src="https://images.unsplash.com/photo-1707697781368-d4f7a152510e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHx8"
-            src={img}
-            alt={title}
-            className="w-full bg-slate-300 h-full object-cover object-center"
-          />
-          {/* {subimgs.length === 0 && (
-            <img
-              src="https://images.unsplash.com/photo-1707697781368-d4f7a152510e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHx8"
-              alt="lol"
-              className="w-full h-full object-cover object-center bg-slate-300"
-            />
-          )} */}
-        </div>
         <div className="w-full flex flex-col justify-between  mr-4">
           <div>
             <h3 className="text-xl text-slate-500 font-semibold capitalize mb-3">
@@ -77,6 +62,21 @@ function Posts({ post }) {
             )}
           </div>
         </div>
+      </div>
+      <div className={`h-72  flex gap-2`}>
+        <img
+          // src="https://images.unsplash.com/photo-1707697781368-d4f7a152510e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHx8"
+          src={img}
+          alt={title}
+          className="w-full bg-slate-300 h-full object-cover object-center"
+        />
+        {/* {subimgs.length === 0 && (
+            <img
+              src="https://images.unsplash.com/photo-1707697781368-d4f7a152510e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHx8"
+              alt="lol"
+              className="w-full h-full object-cover object-center bg-slate-300"
+            />
+          )} */}
       </div>
       <div className="flex flex-col justify-center">
         {paragraph && (

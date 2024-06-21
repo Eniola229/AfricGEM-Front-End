@@ -5,7 +5,7 @@ import { getPost } from "../../services/apiPost";
 import BlogPosts from "./BlogPosts";
 import Posts from "./Posts";
 
-function Post() {
+function BlogPost() {
   const params = useParams();
   const id = Number(params.id);
   const { data: post = {}, isLoading } = useQuery({
@@ -14,13 +14,23 @@ function Post() {
   });
 
   return (
-    <div>
-      {" "}
-      {/* <AdvertList /> */}
-      <h3 className="head ">{post.title}</h3>
+    <section className="my-8">
+      <div className="">
+        <div className="w-full">
+          <img
+            className="object-cover object-center w-full h-80 xl:h-[28rem]"
+            src="https://images.unsplash.com/photo-1624996379697-f01d168b1a52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+            alt=""
+          />
+
+          <h1 className=" mt-4  text-2xl font-semibold leading-tight text-gray-800 dark:text-white">
+            What do you want to know about UI
+          </h1>
+        </div>
+      </div>
       <Posts post={post} />
-    </div>
+    </section>
   );
 }
 
-export default Post;
+export default BlogPost;
