@@ -24,7 +24,7 @@ function Navigationbar() {
             <li>
               <NavLink
                 to="/"
-                className="hover:underline  transform py-2 px-3 rounded-md flex items-center gap-2"
+                className="hover:bg-green-500   transition-colors duration-300 py-2 px-3 rounded-md flex items-center gap-2"
               >
                 <HiOutlineQueueList />
                 Feeds
@@ -33,7 +33,7 @@ function Navigationbar() {
             <li>
               <NavLink
                 to="/business"
-                className="hover:underline transform py-2 px-3 rounded-md flex items-center gap-2"
+                className="hover:bg-green-500  transition-colors duration-300 py-2 px-3 rounded-md flex items-center gap-2"
               >
                 <HiChartSquareBar />
                 Business
@@ -43,7 +43,7 @@ function Navigationbar() {
             <li>
               <NavLink
                 to="/educational"
-                className="hover:underline transform py-2 px-3 rounded-md flex items-center gap-2"
+                className="hover:bg-green-500  transition-colors duration-300 py-2 px-3 rounded-md flex items-center gap-2"
               >
                 <HiOutlineAcademicCap />
                 Educational
@@ -52,7 +52,7 @@ function Navigationbar() {
             <li>
               <NavLink
                 to="/movie"
-                className="hover:underline transform py-2 px-3 rounded-md flex items-center gap-2"
+                className="hover:bg-green-500  transition-colors duration-300 py-2 px-3 rounded-md flex items-center gap-2"
               >
                 <HiPlay />
                 Movies
@@ -62,7 +62,7 @@ function Navigationbar() {
             <li>
               <NavLink
                 to="/entertainment"
-                className="hover:underline transform py-2 px-3 rounded-md flex items-center gap-2"
+                className="hover:bg-green-500  transition-colors duration-300 py-2 px-3 rounded-md flex items-center gap-2"
               >
                 <HiOutlineUserGroup />
                 Entertainment
@@ -71,7 +71,7 @@ function Navigationbar() {
             <li>
               <NavLink
                 to={!isAuthenticated ? "/login" : "/account"}
-                className="hover:underline transform py-2 px-3 rounded-md flex items-center gap-2 "
+                className="hover:bg-green-500  transition-colors duration-300 py-2 px-3 rounded-md flex items-center gap-2 "
               >
                 <HiUser />
                 My Profile
@@ -80,7 +80,7 @@ function Navigationbar() {
             {/* <li>
               <NavLink
                 to="ads"
-                className="hover:underline transform py-2 px-3 rounded-md flex items-center gap-2 "
+                className="hover:bg-green-500  transition-colors duration-300 py-2 px-3 rounded-md flex items-center gap-2 "
               >
                 <PiAddressBook />
                 Advertise on africTv

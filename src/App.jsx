@@ -29,6 +29,8 @@ import UpdateProfile from "./Pages/UpdateProfile";
 import PopularMovie from "./features/movie/PopularMovie";
 import VideoPost from "./features/Video/VideoPost";
 import Music from "./features/music/Music";
+import BlogPage from "./features/blog/BlogPage";
+import CreatPost from "./features/(EDITOR)/CreatPost";
 
 const provider = createBrowserRouter([
   {
@@ -40,13 +42,28 @@ const provider = createBrowserRouter([
         path: "/",
       },
       {
-        element: <EducationalPage />,
-        path: "/educational",
+        element: <CreatPost />,
+        path: "/creat-post",
       },
       {
-        element: <Post />,
-        path: "/educational/post/:id",
+        element: <EducationalPage />,
+        path: "/educational",
+        children: [
+          {
+            index: true,
+            element: <Navigate to="blog" />,
+          },
+          {
+            element: <BlogPage />,
+            path: "blog",
+          },
+          {
+            element: <Post />,
+            path: "/educational/blog/post/:id",
+          },
+        ],
       },
+
       {
         element: <Account />,
         path: "/account",

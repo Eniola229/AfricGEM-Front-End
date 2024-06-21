@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useCreatAccount } from "./useCreateAccount";
 import { Link } from "react-router-dom";
+import Button from "../../ui/Button";
 
 function Signup() {
   const { isLoading, creatAccount } = useCreatAccount();
@@ -155,15 +156,16 @@ function Signup() {
           </p>
         </div>
       </div>
-      <button
+      <Button
+        type="primary"
         className="w-full mt-6 bg-green-600 rounded-lg px-4 py-2 text-lg text-white tracking-wide font-semibold font-sans"
         disabled={isLoading}
       >
         Register
-      </button>
+      </Button>
       <p className="mt-8">
         already have an account ?
-        <Link to="/login" className="text-blue underline ml-8">
+        <Link to="/login" className=" underline ml-8 text-green-400 ">
           Login
         </Link>
       </p>{" "}

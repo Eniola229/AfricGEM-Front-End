@@ -74,7 +74,8 @@ function LoginForm() {
       </div>
       <Button
         // type="submit"
-        className="w-full mt-6 mb-3 bg-yellow-500 rounded-lg px-4 py-2 text-lg text-gray-800 tracking-wide font-semibold font-sans flex justify-center items-center gap-12 capitalize disabled:cursor-not-allowed"
+        type="primary"
+        className="w-full mt-6 mb-3  rounded-lg px-4 py-2 text-lg text-gray-800 tracking-wide font-semibold font-sans flex justify-center items-center gap-12 capitalize disabled:cursor-not-allowed"
         disabled={isLoading}
       >
         login
@@ -82,7 +83,7 @@ function LoginForm() {
       </Button>
       <p>
         don't have account ?
-        <Link to="/creat-account" className="text-blue underline ml-8">
+        <Link to="/creat-account" className="text-green-400 underline ml-8">
           create account
         </Link>
       </p>{" "}

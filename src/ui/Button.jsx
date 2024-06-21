@@ -10,7 +10,7 @@ function Button({
   htmlType,
 }) {
   const base =
-    "tracking-wide outline-none font-semibold my-4  text-sm  text-stone-50 focus:ring focus:ring-yellow-300 focus:ring-offset-1 rounded-full bg-yellow-500  uppercase transition-all  duration-500 hover:opacity-70";
+    "tracking-wide outline-none font-semibold my-4  text-sm  text-stone-50 focus:ring focus:ring-green-300 focus:ring-offset-1 rounded-full bg-green-500  uppercase transition-all  duration-500 hover:opacity-70";
   const styles = {
     primary: base + " px-4 py-3 md:px-5 md:py-4 ",
     small: base + " text-xs outline-none px-4 py-2",

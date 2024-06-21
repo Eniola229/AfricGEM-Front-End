@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useUSer } from "../Auth/useUser";
-import { HiArrowLeft, HiCheck, HiLink } from "react-icons/hi";
+import { HiArrowLeft, HiLink } from "react-icons/hi";
 import { HiCalendarDays } from "react-icons/hi2";
 import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
 
@@ -31,7 +31,7 @@ function UserProfile() {
           <div class="flex justify-between bg-slate-50 items-center">
             <div class="px-4 py-2">
               <Button
-                className=" text-2xl font-medium rounded-full text-yellow-500 hover:bg-yellow-100  float-right"
+                className=" text-2xl font-medium rounded-full text-green-500 hover:bg-green-100  float-right"
                 handler={() => navigate(-1)}
               >
                 <HiArrowLeft class="m-2 h-6 w-6" />
@@ -46,7 +46,7 @@ function UserProfile() {
         {/* <!-- User card--> */}
         <div>
           <div
-            class="w-full bg-cover bg-no-repeat bg-center bg-yellow-500"
+            class="w-full bg-cover bg-no-repeat bg-center bg-green-500"
             style={{
               height: "200px",
               backgroundImage:
@@ -65,7 +65,7 @@ function UserProfile() {
           <div class="absolute top-48 ml-3">
             <div class="w-36 h-36  relative ">
               <img
-                class="md rounded-full relative border-2 border-yellow-500 h-full w-full"
+                class="md rounded-full relative border-2 border-green-500 h-full w-full"
                 src={
                   (avatar !== null && avatar) || "/imgs/defaultuser-avater.jpg"
                 }
@@ -81,7 +81,7 @@ function UserProfile() {
             <div>
               <div class="flex flex-col text-right">
                 <Button
-                  className=" justify-center  max-h-max whitespace-nowrap focus:outline-none  focus:ring   max-w-max border bg-transparent border-yellow-500 text-yellow-500 hover:border-yellow-800  flex items-center hover:shadow-lg font-bold py-2 px-4 rounded-full mr-0 ml-auto"
+                  className=" justify-center  max-h-max whitespace-nowrap focus:outline-none  focus:ring   max-w-max border bg-transparent border-green-500 text-green-500 hover:border-green-800  flex items-center hover:shadow-lg font-bold py-2 px-4 rounded-full mr-0 ml-auto"
                   handler={() => navigate(`/account/update-profile/${id}`)}
                 >
                   Edit Profile
@@ -95,7 +95,7 @@ function UserProfile() {
                 <h2 class="text-xl leading-6 font-bold  capitalize flex gap-2 items-center">
                   {/* sofia müller{" "} */}
                   {fullName}{" "}
-                  <IoCheckmarkDoneCircleSharp className=" fill-yellow-500" />
+                  <IoCheckmarkDoneCircleSharp className=" fill-green-500" />
                 </h2>
                 <p class="text-sm leading-5 font-medium text-gray-600">
                   {/* @safeya_101 */}
@@ -115,7 +115,7 @@ function UserProfile() {
                     <a
                       href="https://AfricGEM.com"
                       target="#"
-                      class="leading-5 ml-1 text-yellow-500"
+                      class="leading-5 ml-1 text-green-500"
                     >
                       www.AfricGEM.com
                     </a>
@@ -150,7 +150,7 @@ function UserProfile() {
               title: "posts",
               icon: "",
               class:
-                "text-sm font-normal capitalize border-b-4 border-b-yellow-500",
+                "text-sm font-normal capitalize border-b-4 border-b-green-500",
             },
             {
               title: "Media",

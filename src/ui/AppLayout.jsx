@@ -9,16 +9,25 @@ function AppLayout() {
   //Check page url
   const isMoviePage = urlLocation?.pathname.includes("/movie");
   const isProfilePage = urlLocation?.pathname.includes("/account");
-
+  const isCreatPost = urlLocation?.pathname.includes("/creat-post");
   return (
-    <div className="grid gap-3  grid-cols-[15rem_25rem_1fr_25rem] bg-slate-100 grid-rows-auto h-screen">
-      {!isProfilePage && <Header />}
-      <LeftSidebar />
-      <Main className={`${isMoviePage ? "col-span-3 w-[90%]" : ""} h-full`}>
-        <Outlet />
-      </Main>
-      {!isMoviePage && <RightSidebar render={""} />}
-    </div>
+    <>
+      {!isCreatPost ? (
+        <div className="grid gap-3  grid-cols-[15rem_25rem_1fr_25rem] bg-slate-100 grid-rows-auto h-screen">
+          {!isProfilePage && <Header />}
+          <LeftSidebar />
+          <Main className={`${isMoviePage ? "col-span-3 w-[90%]" : ""} h-full`}>
+            <Outlet />
+          </Main>
+          {!isMoviePage && <RightSidebar render={urlLocation} />}
+        </div>
+      ) : (
+        <>
+          <Header />
+          <Outlet />
+        </>
+      )}
+    </>
   );
 }
 

@@ -156,14 +156,15 @@ function EditProfileForm() {
         </div>
         <div className="flex justify-end gap-8 items-center">
           <button
-            className=" mt-6 mb-3  rounded-md px-4 py-2 border-2 border-yellow-500 text-base text-gray-800 tracking-wide font-medium capitalize disabled:cursor-not-allowed"
+            className=" mt-6 mb-3  rounded-md px-4 py-2 border-2 border-green-500 text-base text-gray-800 tracking-wide font-medium capitalize disabled:cursor-not-allowed"
             type="reset"
             disabled={isLoading}
           >
             reset form
           </button>
           <Button
-            className=" mt-6 mb-3 bg-yellow-500 rounded-md px-4 py-2 text-base text-gray-800 tracking-wide font-medium capitalize disabled:cursor-not-allowed flex items-center justify-between gap-4"
+            type="primary"
+            className=" mt-6 mb-3  rounded-md px-4 py-2 text-base text-gray-800 tracking-wide font-medium capitalize disabled:cursor-not-allowed flex items-center justify-between gap-4"
             disabled={isLoading}
           >
             update profile
